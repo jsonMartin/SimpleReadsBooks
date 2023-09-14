@@ -26,33 +26,40 @@
 
   $: headerClass = hideOverflow ? 'w-full relative overflow-hidden relative' : 'w-full relative overflow-visible relative';
 
-  export let currentPath;
   export let randomNum: number;
-	const randomNum2 = Math.random() * 1000;
+  const randomNum2 = Math.random() * 1000;
 
-  $: CURRENT_PATHNAME = currentPath as any;
+  $: loaded = false;
+  let currentPath = '';
+  let currentUrlPathname = currentPath;
 
-  $: activeUrl = currentPath;
-  // $: CURRENT_PATHNAME = window ? window?.location?.pathname : null;
-
-
-	$: loaded = false;
-
-	onMount(() => {
+  onMount(() => {
     console.log('Mounted navbar');
+
     const OVERFLOW_ANIMATION_TIME = 2000;
     setTimeout(() => {
       hideOverflow = false;
-			loaded=true;
+      loaded = true;
     }, OVERFLOW_ANIMATION_TIME);
+
+
+    // Update Current Path on route change
+    currentUrlPathname = window.location.pathname;
+    document.addEventListener('astro:after-swap', () => {
+      currentUrlPathname = window.location.pathname;
+    });
   });
 
-	$: navDivClass = "mx-auto flex flex-wrap justify-between items-center max-w-screen-xl" + (!loaded ? ' animate-flipInX' : '')
-  $: hunnieBunnieClass = "absolute bottom-[-9px] right-[-5px] sm:bottom-[-12px] md:bottom-[-22px] md:right-[-10px] lg:bottom-[-22px] lg:right-[-5px] h-16 sm:h-20 md:h-40 lg:h-40 !w-fit" + (!loaded ? ' animate-slideUp' : '');
-	$: hunnieBunnieReadingClass = "absolute hidden sm:block sm:left-[-4%] md:left-[-3%] left-[-4%] bottom-[0px] rotate-3 sm:h-[100px] md:h-[140px] h-[80px] !w-fit" + (!loaded ? ' animate-slideInFromLeft' : '');
+  $: navDivClass = 'mx-auto flex flex-wrap justify-between items-center max-w-screen-xl' + (!loaded ? ' animate-flipInX' : '');
+  $: hunnieBunnieClass =
+    'absolute bottom-[-9px] right-[-5px] sm:bottom-[-12px] md:bottom-[-22px] md:right-[-10px] lg:bottom-[-22px] lg:right-[-5px] h-16 sm:h-20 md:h-40 lg:h-40 !w-fit' +
+    (!loaded ? ' animate-slideUp' : '');
+  $: hunnieBunnieReadingClass =
+    'absolute hidden sm:block sm:left-[-4%] md:left-[-3%] left-[-4%] bottom-[0px] rotate-3 sm:h-[100px] md:h-[140px] h-[80px] !w-fit' +
+    (!loaded ? ' animate-slideInFromLeft' : '');
 </script>
 
-CurrentPath: {CURRENT_PATHNAME} | RandomNum: {randomNum} | RandomNum2: { randomNum2 } | loaded: { loaded }
+CurrentPath: {currentUrlPathname} | RandomNum: {randomNum} | RandomNum2: {randomNum2} | loaded: {loaded}
 <div id="header-container">
   <!-- Use visibility:hidden instead of conditionally rendering -->
   <!-- This is to prevent the animation from firing unnecessarily -->
@@ -88,47 +95,25 @@ CurrentPath: {CURRENT_PATHNAME} | RandomNum: {randomNum} | RandomNum2: { randomN
 
       <NavUl
         {hidden}
-        {activeUrl}
+        activeUrl={currentUrlPathname}
         nonActiveClass="md:text-white md:font-bold"
         activeClass="font-extrabold text-white underline bg-green-400 bg-pink-500 md:bg-transparent"
         ulClass="flex flex-col p-3 mt-3 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium bg-transparent"
         divClass="w-full md:block md:w-auto md:bg-black md:bg-opacity-[.15] md:rounded-full md:mr-2 md:mt-2 md:[transform:perspective(250px)_translateZ(0)_rotateX(5deg)]"
         color="green"
       >
-        <NavLi
-          href="/home"
-          active={true}
-          zactive={CURRENT_PATHNAME.includes('home') || CURRENT_PATHNAME === '/'}
-          nonActiveClass="md:hover:transform md:hover:scale-125 md:text-white md:font-bold"
-          activeClass="bg-pink-500 text-pink-500 md:hover:transform md:hover:scale-125 text-white md:bg-transparent md:font-extrabold md:underline"
-        >
+        <NavLi href="/home">
           <span>Welcome</span>
         </NavLi>
-        <NavLi
-          href="/about"
-          active={CURRENT_PATHNAME.includes('about')}
-          class="hover:font-bolder"
-          nonActiveClass="md:hover:transform md:hover:scale-125 md:text-white md:font-bold"
-          activeClass="bg-primary-500 md:hover:transform md:hover:scale-125 text-white md:bg-transparent md:font-extrabold md:underline"
-        >
+        <NavLi href="/about">
           <span>About</span>
         </NavLi>
 
-        <NavLi
-          href="/products"
-          active={CURRENT_PATHNAME.includes('products')}
-          nonActiveClass="md:hover:transform md:hover:scale-125 md:text-white md:font-bold"
-          activeClass="bg-primary-500 md:hover:transform md:hover:scale-125 text-white md:bg-transparent md:font-extrabold md:underline"
-        >
+        <NavLi href="/products">
           <span>Books & Products</span>
         </NavLi>
 
-        <NavLi
-          href="/contact"
-          active={CURRENT_PATHNAME.includes('contact')}
-          nonActiveClass="md:hover:transform md:hover:scale-125 md:text-white md:font-bold"
-          activeClass="bg-primary-500 md:hover:transform md:hover:scale-125 text-white md:bg-transparent md:font-extrabold md:underline"
-        >
+        <NavLi href="/contact">
           <span>Contact</span>
         </NavLi>
       </NavUl>

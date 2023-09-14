@@ -60,9 +60,9 @@ const randomNum = generateRandomNumber();
   <!-- Fonts -->
   <body>
     <NavBar
-      currentPath={currentPath}
       randomNum={randomNum}
-      client:load
+      zclient:load
+      client:only="svelte"
       transition:persist="header"
     />
     <slot />
