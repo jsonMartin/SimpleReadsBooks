@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from './hero.svelte';
+// import HomePage from './home.svelte';
+
+console.log('Hello from ASTRO');
+console.log(import.meta.env);
+debugger;
+---
+
+<Layout title="Hello from Astro">
+  <!-- <head>
+  <title>Welcome to Simple Reads Books</title>
+</head> -->
+  <section class="w-full py-10 md:py-20 px-4 md:px-5 bg-[#009933] bg-opacity-40 flex-col justify-start items-center inline-flex font-[Itim]">
+    <div class="justify-start items-center inline-flex">
+      <div class="self-stretch justify-between items-start gap-2.5 inline-flex">
+        <div class="text-center text-gray-900 lg:text-4xl xs:text-normal sm:text-2xl md:text-3xl font-normal md:px-10">
+          Simple Reads Books encourages children to explore nature through entertaining stories filled with colorful illustrations
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Hero client:load />
+</Layout>

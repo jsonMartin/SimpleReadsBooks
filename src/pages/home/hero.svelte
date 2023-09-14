@@ -1,0 +1,75 @@
+<script>
+	import ButtonAmazon from '../../components/ButtonAmazon.svelte';
+  function goto(url) {
+    window.location.href = url;
+  }
+
+	import { CldImage } from 'svelte-cloudinary';
+</script>
+<section>
+	<div class="flex flex-row flex-wrap font-[Itim]">
+		<div
+			class="p-4 md:basis-7/12"
+			role="button"
+			tabindex="0"
+			on:keypress={(e) => {
+				if (e.key === 'Enter') {
+					goto('/products/hunnie-bunnys-garden');
+				}
+			}}
+			on:click={() => goto('/products/hunnie-bunnys-garden')}
+		>
+			<a href="/products/hunnie-bunnys-garden">
+				<CldImage
+					width={1616}
+					height="100%"
+					aspectRatio={1413 / 983}
+					class="rounded-lg w-full"
+					src="hunnie-bunnys-garden-table"
+					alt="book mockup cover"
+					quality={75}
+					loading="eager"
+				/>
+
+				<div class="self-stretch text-center text-gray-900 md:text-xl lg:text-2xl text-xl p-3">
+					<p class="mb-2">
+						Hunnie Bunny’s Garden is a delightful blend of entertainment and education that provides
+						endless opportunities for learning and discovery.
+					</p>
+					<p class="mb-2">
+						This charming story is a wonderful testament to the beauty of nature and the joy that
+						gardening can bring.
+					</p>
+					<p class="pt-3 text-shadow-black-xs text-black">
+						Add Hunnie Bunny’s Garden to your child’s library today!
+					</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="p-4 basis-full md:basis-5/12 flex flex-col justify-start items-center">
+			<div
+				class="md:mt-[70px] xl:mt-[90px] text-center text-black text-xl lg:text-2xl xl:text-3xl font-normal mb-10 md:mb-20"
+			>
+				<div
+					class="text-center text-black text-3xl lg:text-4xl xl:text-5xl font-normal mb-2 underline"
+				>
+					Hunnie Bunny's Garden
+				</div>
+				<mark class="px-2 bg-[#B9D6B8] rounded">Available Now</mark>
+			</div>
+
+			<ButtonAmazon />
+
+			<CldImage
+				width={1420}
+				height="100%"
+				aspectRatio={2100 / 1500}
+				style="scale:1.25"
+				src="hunnie-bunny-reading-book"
+				alt="hunnie bunny reading"
+				class="mt-16"
+			/>
+		</div>
+	</div>
+</section>
