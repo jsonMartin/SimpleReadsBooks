@@ -19,7 +19,7 @@
 			}}
 			on:click={() => goto('/products/hunnie-bunnys-garden')}
 		>
-			<a href="/products/hunnie-bunnys-garden">
+			<a href="/products/hunnie-bunnys-garden" transition:name={"image"}>
 				<CldImage
 					width={1616}
 					height="100%"
