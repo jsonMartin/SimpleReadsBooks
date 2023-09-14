@@ -19,7 +19,7 @@
   import { onMount } from 'svelte';
   import { CldImage } from 'svelte-cloudinary';
 
-  const MAX_PAGE_WIDTH = 1920;
+  const MAX_PAGE_WIDTH = 1440;
 
   // Hide allow overflow from the banner to overlap other parts of the page.
   let hideOverflow = true;
@@ -82,8 +82,8 @@ CurrentPath: {CURRENT_PATHNAME} | RandomNum: {randomNum} | RandomNum2: { randomN
       </NavBrand>
 
       <NavHamburger
-        on:click={() => toggle()}
-        btnClass="hover:bg-primary"
+        on:click={toggle}
+        class="hover:bg-primary"
       />
 
       <NavUl

@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Hero from './hero.svelte';
 // import HomePage from './home.svelte';
 
 console.log('Hello from ASTRO');
@@ -9,7 +8,9 @@ debugger;
 ---
 
 <Layout title="about">
-  <h1>About</h1>
+  <h1 onclick="
+  alert('hi')
+  ">About</h1>
 
   <img
     src="https://res.cloudinary.com/simple-reads-books/image/upload/c_limit,w_1616/f_auto/q_75/hunnie-bunnys-garden-table?_a=BBEABlAE0"
