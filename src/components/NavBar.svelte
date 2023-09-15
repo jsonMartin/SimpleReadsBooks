@@ -49,7 +49,7 @@
     (!loaded ? ' animate-slideInFromLeft' : '');
 </script>
 
-CurrentPath: {currentUrlPathname} | RandomNum: {randomNum} | RandomNum2: {randomNum2} | loaded: {loaded}
+<!-- CurrentPath: {currentUrlPathname} | RandomNum: {randomNum} | RandomNum2: {randomNum2} | loaded: {loaded} -->
 <div id="header-container">
   <!-- Use visibility:hidden instead of conditionally rendering -->
   <!-- This is to prevent the animation from firing unnecessarily -->
