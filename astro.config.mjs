@@ -9,4 +9,8 @@ export default defineConfig({
   // output: 'hybrid',
   output: 'server',
   adapter: netlify(),
+
+  redirects: {
+    '/': '/home',
+  }
 });
