@@ -61,8 +61,7 @@ const randomNum = generateRandomNumber();
   <body>
     <NavBar
       randomNum={randomNum}
-      zclient:load
-      client:only="svelte"
+      client:load
       transition:persist="header"
     />
     <slot />
