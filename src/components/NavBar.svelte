@@ -5,16 +5,6 @@
     NavLi,
     NavUl,
     NavHamburger,
-    Button,
-    Modal,
-    ButtonGroup,
-    Input,
-    Footer,
-    FooterCopyright,
-    FooterLinkGroup,
-    FooterBrand,
-    FooterLink,
-    FooterIcon,
   } from 'flowbite-svelte';
   import { onMount } from 'svelte';
   import { CldImage } from 'svelte-cloudinary';

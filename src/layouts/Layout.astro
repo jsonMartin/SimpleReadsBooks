@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 // import Header from '../components/Header.svelte';
 import Header from './Header.astro';
+import Footer from './_Footer.svelte';
 import NavBar from '../components/NavBar.svelte';
 interface Props {
   title: string;
@@ -96,7 +97,10 @@ const randomNum = generateRandomNumber();
         client:load
         transition:persist="header"
       />
+
       <slot />
+
+      <Footer />
     </div>
   </body>
 </html>
