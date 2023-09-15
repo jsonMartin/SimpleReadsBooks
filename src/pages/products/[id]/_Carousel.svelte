@@ -55,4 +55,8 @@
     width: fit-content !important;
     border-radius: 0.25rem !important;
   }
+
+  :global(#carousel-wrapper button > img) {
+    object-fit: cover !important;
+  }
 </style>

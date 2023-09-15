@@ -19,7 +19,7 @@ console.log('Products:', products);
         return (
           <Card
             padding="none"
-            class={'h-fit' + ' ' + (i > 0 ? 'opacity-40' : '')}
+            class={'h-fit'}
           >
             <a
               href={'/products/' + product.id}
@@ -30,6 +30,7 @@ console.log('Products:', products);
                 src={product.images[0].src}
                 alt={'Product image' + i}
                 loading="lazy"
+                transition:name={product.id}
               />
             </a>
             <div class="px-5 py-5 pt-2">
@@ -47,7 +48,10 @@ console.log('Products:', products);
                 <span class="text-xl font-medium text-gray-900 dark:text-white">
                   ${product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                 </span>
-                <ButtonAmazon size="xs" />
+
+                <div transition:name={'amazon-button' + product.id}>
+                  <ButtonAmazon size="xs" />
+                </div>
               </div>
             </div>
           </Card>

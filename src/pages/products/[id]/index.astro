@@ -1,12 +1,7 @@
 ---
 // Pre-render product pages
 export function getStaticPaths() {
-  return [
-    { params: { id: 'hunnie-bunnys-garden' } },
-    // { params: { id: "1" } },
-    // { params: { id: "2" } },
-    // { params: { id: "3" } }
-  ];
+  return [{ params: { id: 'hunnie-bunnys-garden' } }, { params: { id: 'hunnie-bunnys-garden-mystery' } }];
 }
 
 import Layout from '../../../layouts/Layout.astro';
@@ -44,6 +39,7 @@ const isBook = product?.type === 'book';
         <div
           id="carousel-wrapper"
           class="dark m-2 sm:m-6 md:m-10"
+          transition:name={product.id}
         >
           <Carousel
             images={product.images}
@@ -66,8 +62,9 @@ const isBook = product?.type === 'book';
           <Fragment set:html={wrapTextInParagraphTags(product.description)} />
 
           <h2 class="p-0 mt-[5px]">${product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</h2>
-
-          <ButtonAmazon fullWidth />
+          <div transition:name={'amazon-button' + product.id}>
+            <ButtonAmazon fullWidth />
+          </div>
         </div>
       </div>
     </Layout>
