@@ -16,6 +16,8 @@
     FooterLink,
     FooterIcon,
   } from 'flowbite-svelte';
+
+  import { isEmailModalOpen } from '../data/layoutStore';
   </script>
 		<Footer footerType="socialmedia" class="bg-[#420063]">
 			<div class="m-auto max-w-screen-xl">
@@ -42,10 +44,10 @@
 
 					<div
 						class="w-full rounded-xl col-start-1 md:col-start-10 col-end-13"
-						on:click={() => (emailSubscribeModal = true)}
+						on:click={() => isEmailModalOpen.set(true)}
 						on:keydown={(e) => {
 							if (e.key === 'Enter') {
-								emailSubscribeModal = true;
+                isEmailModalOpen.set(true)
 							}
 						}}
 						role="button"

@@ -4,6 +4,7 @@ import { ViewTransitions } from 'astro:transitions';
 import Header from './Header.astro';
 import Footer from './_Footer.svelte';
 import NavBar from '../components/NavBar.svelte';
+import EmailSubscribeModal from './_EmailSubscribeModal.svelte';
 interface Props {
   title: string;
 }
@@ -100,7 +101,9 @@ const randomNum = generateRandomNumber();
 
       <slot />
 
-      <Footer />
+      <Footer client:load />
+
+      <EmailSubscribeModal client:load />
     </div>
   </body>
 </html>
