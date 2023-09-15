@@ -17,7 +17,35 @@ function generateRandomNumber() {
 const randomNum = generateRandomNumber();
 ---
 
-<!doctype html>
+<style is:global>
+  .text-shadow {
+    text-shadow: #009933 1px 0 10px;
+  }
+
+  .text-shadow-sm {
+    text-shadow: #fff 1px 0 10px;
+  }
+
+  .text-shadow-black-sm {
+    text-shadow: #000 1px 0 35px;
+  }
+
+  html {
+    height: 100vh;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(128, 0, 0, 0.9),
+      rgba(128, 70, 0, 0.9),
+      rgba(128, 128, 0, 0.9),
+      rgba(70, 128, 0, 0.9),
+      rgba(0, 128, 70, 0.9),
+      rgba(0, 0, 128, 0.9),
+      rgba(75, 0, 130, 0.9)
+    );
+    background-attachment: fixed;
+  }
+</style>
+
 <html lang="en">
   <head>
     <title>{title}</title>
@@ -59,11 +87,16 @@ const randomNum = generateRandomNumber();
 
   <!-- Fonts -->
   <body>
-    <NavBar
-      randomNum={randomNum}
-      client:load
-      transition:persist="header"
-    />
-    <slot />
+    <div
+      id="page-container"
+      class="m-auto max-w-screen-xl w-full overflow-hidden flex flex-col bg-white"
+    >
+      <NavBar
+        randomNum={randomNum}
+        client:load
+        transition:persist="header"
+      />
+      <slot />
+    </div>
   </body>
 </html>
