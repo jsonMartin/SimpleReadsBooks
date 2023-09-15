@@ -15,6 +15,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^3.0.13",
     "flowbite-svelte": "^0.44.15",
+    "flowbite-svelte-icons": "^0.4.4",
     "nanostores": "^0.9.3",
     "svelte": "^4.2.0",
     "svelte-cloudinary": "^1.1.0",
