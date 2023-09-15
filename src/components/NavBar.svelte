@@ -7,7 +7,7 @@
     NavHamburger,
   } from 'flowbite-svelte';
   import { onMount } from 'svelte';
-  import { CldImage } from 'svelte-cloudinary';
+  import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
 
   const MAX_PAGE_WIDTH = 1440;
 

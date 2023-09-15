@@ -1,5 +1,5 @@
 <script>
-  import { CldImage } from 'svelte-cloudinary';
+  import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
 </script>
 <section class="w-full font-[Itim]">
 	<div
