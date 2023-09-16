@@ -1,10 +1,9 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-// import Header from '../components/Header.svelte';
-import Header from './Header.astro';
 import Footer from './_Footer.svelte';
-import NavBar from '../components/NavBar.svelte';
+import NavBar from './_NavBar.svelte';
 import EmailSubscribeModal from './_EmailSubscribeModal.svelte';
+
 interface Props {
   title: string;
 }
@@ -17,6 +16,8 @@ function generateRandomNumber() {
 }
 
 const randomNum = generateRandomNumber();
+
+console.log(`Rendering page: ${Astro.url.href}`);
 ---
 
 <style is:global>
@@ -70,8 +71,8 @@ const randomNum = generateRandomNumber();
     />
     <link
       rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
+      type="image/x-icon"
+      href="/favicon.ico"
     /><link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -99,8 +100,6 @@ const randomNum = generateRandomNumber();
       gtag('config', 'G-9YTEE5C1YT');
     </script>
   </head>
-
-  <!-- Favicon -->
 
   <!-- Fonts -->
   <body>

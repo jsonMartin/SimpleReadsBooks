@@ -36,10 +36,6 @@ export const products: any = {
       "src": "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1694474872/Hunnie_Bunnys_Garden_Mystery_Book_Cover_Front_tcnuvs.png"
     },
     {
-      "title": 1,
-      "src": "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1694474914/Hunnie_Bunnys_Garden_Mystery_Book_Cover_Back_hhjwwy.png"
-    },
-    {
       "title": 2,
       "src": "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1694474999/Hunnie_Bunny_s_Garden_Mystery_Page_2_qs2ost.png"
     },
@@ -50,7 +46,12 @@ export const products: any = {
     {
       "title": 4,
       "src": "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1694475001/Hunnie_Bunny_s_Garden_Mystery_Page_4_elvp0m.png"
-    }
+    },
+    {
+      "title": 1,
+      "src": "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1694474914/Hunnie_Bunnys_Garden_Mystery_Book_Cover_Back_hhjwwy.png"
+    },
+
     ],
   }
 }
