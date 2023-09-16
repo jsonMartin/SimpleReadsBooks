@@ -16,8 +16,7 @@
 
   $: headerClass = hideOverflow ? 'w-full relative overflow-hidden relative' : 'w-full relative overflow-visible relative';
 
-  export let randomNum: number;
-  const randomNum2 = Math.random() * 1000;
+  export let randomNum: number; // TODO: Remove
 
   $: loaded = false;
   let currentPath = '';
