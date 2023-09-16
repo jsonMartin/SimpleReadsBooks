@@ -2,18 +2,19 @@
 	import { Button } from 'flowbite-svelte';
 
 	export let fullWidth = false;
-	export let disabled = true;
+	export let disabled = false;
 	export let size: 'xl' | 'xs' | 'sm' | 'lg' | 'md' = 'xl';
 
 	$: buttonClass = `${fullWidth && 'w-full'} no-underline`;
 </script>
 
 <Button
-	href="https://www.amazon.com/dp/B0C9VVS9KX?ref=myi_title_dp"
+	href={!disabled ? "https://www.amazon.com/dp/B0C9VVS9KX?ref=myi_title_dp" : ''}
   target="_blank"
 	color="primary"
 	{size}
 	class={buttonClass}
+	disabled={disabled}
 >
 	<svg
 		class="mr-3"

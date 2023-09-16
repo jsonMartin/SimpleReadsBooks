@@ -1,7 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ComingSoon from './_ComingSoon.svelte';
-import Hero from './hero.astro';
+import Hero from './_Hero.astro';
+import HeroGardenMystery from './_HeroGardenMystery.astro';
 // import HomePage from './home.svelte';
 
 console.log('Hello from ASTRO');
@@ -27,6 +28,8 @@ debugger;
     transition:name="image"
     transition:animate="slide"
   />
+
+  <HeroGardenMystery />
 
   <ComingSoon />
 </Layout>
