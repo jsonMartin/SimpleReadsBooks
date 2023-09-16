@@ -29,7 +29,7 @@
 						name="Simple Reads Books"
 						class="text-white"
 						spanClass="text-white text-md md:text-xl font-[Itim] whitespace-nowrap hidden sm:block"
-						imgClass="h-10 pr-3 sm:w-20 h-fit"
+						imgClass="pr-3 w-[96px] h-[78px]"
 						aClass="flex flex-row items-center min-w-[fit-content] mr-3 col-span-3 hidden sm:flex"
 					/>
 

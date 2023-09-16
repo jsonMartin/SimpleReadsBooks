@@ -13,7 +13,7 @@ import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
 
       <ButtonAmazon disabled={true} />
 
-      <div class="max-w-[200px] sm:max-w-[300px] md:max-w-[600px]">
+      <div class="max-w-[200px] sm:max-w-[300px] md:max-w-[400px]">
         <CldImage
           width={1124}
           height="100%"
@@ -29,17 +29,16 @@ import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
       role="button"
       tabindex="0"
     >
-      <a href="/products/hunnie-bunnys-garden">
+      <a href="/products/hunnie-bunnys-garden-mystery">
         <CldImage
-          width={1616}
+          width={1228}
           height="100%"
-          aspectRatio={1413 / 983}
-          class="rounded-lg w-full"
-          src="hunnie-bunnys-garden-table"
-          alt="book mockup cover"
+          class="rounded-lg w-full object-contain"
+          src="HBGM_book_mockup_mystery_background_1_r6cglp"
+          alt="garden mystery book cover"
           quality={75}
-          loading="eager"
-          transition:name="hunnie-bunnys-garden"
+          loading="lazy"
+          transition:name="hunnie-bunnys-garden-mystery"
         />
 
         <div class="self-stretch text-center text-gray-900 md:text-xl lg:text-2xl text-xl p-3">
