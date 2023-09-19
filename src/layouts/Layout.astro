@@ -1,8 +1,8 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Footer from './_Footer.svelte';
-import NavBar from './_NavBar.svelte';
-import EmailSubscribeModal from './_EmailSubscribeModal.svelte';
+import { ViewTransitions } from "astro:transitions";
+import Footer from "./_Footer.svelte";
+import NavBar from "./_NavBar.svelte";
+import EmailSubscribeModal from "./_EmailSubscribeModal.svelte";
 
 interface Props {
   title: string;
@@ -54,23 +54,10 @@ const randomNum = generateRandomNumber(); // Used for testing state persistance 
 
     <!-- Meta -->
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Astro description"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/favicon.ico"
-    /><link
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" /><link
       rel="preconnect"
       href="https://fonts.googleapis.com"
     /><link
@@ -83,18 +70,15 @@ const randomNum = generateRandomNumber(); // Used for testing state persistance 
     />
 
     <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id="
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'G-9YTEE5C1YT');
+      gtag("config", "G-9YTEE5C1YT");
     </script>
   </head>
 
@@ -102,13 +86,9 @@ const randomNum = generateRandomNumber(); // Used for testing state persistance 
   <body>
     <div
       id="page-container"
-      class="m-auto max-w-screen-xl w-full overflow-hidden flex flex-col bg-white"
+      class="m-auto flex w-full max-w-screen-xl flex-col overflow-hidden bg-white"
     >
-      <NavBar
-        randomNum={randomNum}
-        client:load
-        transition:persist="header"
-      />
+      <NavBar randomNum={randomNum} client:load transition:persist="header" />
 
       <slot />
 

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Modal } from "flowbite-svelte";
 
-  import { isEmailModalOpen } from '../data/layoutStore.js'
+  import { isEmailModalOpen } from "../data/layoutStore.js";
 </script>
 
-<Modal bind:open={$isEmailModalOpen} class="w-fit h-fit pt-10" autoclose>
+<Modal bind:open={$isEmailModalOpen} class="h-fit w-fit pt-10" autoclose>
   <iframe
     title="email subscribe"
     width="540"

@@ -1,13 +1,21 @@
 ---
-import ButtonAmazon from '../../components/ButtonAmazon.svelte';
-import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
+import ButtonAmazon from "../../components/ButtonAmazon.svelte";
+import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
 ---
 
 <section>
-  <div class="flex flex-row flex-wrap font-[Itim] justify-center items-center">
-    <div class="p-4 basis-full md:basis-5/12 flex flex-col justify-start items-center">
-      <div class="md:mt-[70px] xl:mt-[90px] text-center text-black text-xl lg:text-2xl xl:text-3xl font-normal mb-10 md:mb-20">
-        <div class="text-center text-black text-2xl lg:text-3xl xl:text-4xl font-normal mb-2">Hunnie Bunny's Garden Mystery</div>
+  <div class="flex flex-row flex-wrap items-center justify-center font-[Itim]">
+    <div
+      class="flex basis-full flex-col items-center justify-start p-4 md:basis-5/12"
+    >
+      <div
+        class="mb-10 text-center text-xl font-normal text-black md:mb-20 md:mt-[70px] lg:text-2xl xl:mt-[90px] xl:text-3xl"
+      >
+        <div
+          class="mb-2 text-center text-2xl font-normal text-black lg:text-3xl xl:text-4xl"
+        >
+          Hunnie Bunny's Garden Mystery
+        </div>
         <span class="italic text-gray-400">Available 9/30/23</span>
       </div>
 
@@ -25,17 +33,13 @@ import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
       </div>
     </div>
 
-    <div
-      class="p-4 md:basis-7/12"
-      role="button"
-      tabindex="0"
-    >
+    <div class="p-4 md:basis-7/12" role="button" tabindex="0">
       <a href="/products/hunnie-bunnys-garden-mystery">
         <CldImage
           width={1228}
           aspectRatio={1228 / 1067}
           height="100%"
-          class="rounded-lg w-full object-contain"
+          class="w-full rounded-lg object-contain"
           src="HBGM_book_mockup_mystery_background_1_r6cglp"
           alt="garden mystery book cover"
           quality={75}
@@ -43,15 +47,20 @@ import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
           transition:name="hunnie-bunnys-garden-mystery"
         />
 
-        <div class="self-stretch text-center text-gray-900 md:text-xl lg:text-2xl text-xl p-3">
+        <div
+          class="self-stretch p-3 text-center text-xl text-gray-900 md:text-xl lg:text-2xl"
+        >
           <p class="mb-2">
-            <span class="underline">Hunnie Bunny’s Garden Mystery</span> is a heartwarming children’s picture book that beautifully weaves together the thrill
-            of mystery with important life lessons; it's a delightful blend of entertainment and education that provides endless opportunities for learning and
-            discovery.
+            <span class="underline">Hunnie Bunny’s Garden Mystery</span> is a
+            heartwarming children’s picture book that beautifully weaves
+            together the thrill of mystery with important life lessons; it's a
+            delightful blend of entertainment and education that provides
+            endless opportunities for learning and discovery.
           </p>
           <p class="mb-2">
-            This engaging story encourages children to appreciate nature, work together to solve problems, and approach misunderstandings with kindness and
-            empathy.
+            This engaging story encourages children to appreciate nature, work
+            together to solve problems, and approach misunderstandings with
+            kindness and empathy.
           </p>
         </div>
       </a>

@@ -1,22 +1,28 @@
 <script>
-  import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
+  import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
 </script>
 
 <section class="w-full font-[Itim]">
-  <div class="bg-[rgba(0,102,204,0.44)] p-2.5 flex flex-row items-center justify-between w-full relative">
+  <div
+    class="relative flex w-full flex-row items-center justify-between bg-[rgba(0,102,204,0.44)] p-2.5"
+  >
     <CldImage
       width={472}
       height="100%"
       aspectRatio={2100 / 1500}
-      class="hidden sm:flex col-span-3 !max-w-[20%] !h-fit   animate-[rotateSlow_1s_ease-in_infinite]"
+      class="col-span-3 hidden !h-fit !max-w-[20%] animate-[rotateSlow_1s_ease-in_infinite]   sm:flex"
       src="mr-squirrel-sitting"
       alt="Mr. Frog sitting"
     />
 
-    <div class="flex flex-row gap-2.5 justify-center col-span-6 m-auto">
-      <div class="flex flex-col gap-0 items-center justify-start">
-        <div class="text-gray-900 text-center relative self-stretch">
-          <p class="text-xl md:text-2xl lg:text-3xl text-normal text-shadow-sm mb-5">Upcoming Books</p>
+    <div class="col-span-6 m-auto flex flex-row justify-center gap-2.5">
+      <div class="flex flex-col items-center justify-start gap-0">
+        <div class="relative self-stretch text-center text-gray-900">
+          <p
+            class="text-normal text-shadow-sm mb-5 text-xl md:text-2xl lg:text-3xl"
+          >
+            Upcoming Books
+          </p>
           <div class="mt-30">
             <span class="md:text-xl lg:text-2xl">
               Hunnie Bunny’s Christmas Wish <br />
@@ -38,7 +44,7 @@
       width={382}
       height="100%"
       aspectRatio={252 / 191}
-      class="hidden sm:flex col-span-3 !max-w-[20%] !h-fit animate-[bouncefrog_1s_ease-in_infinite]"
+      class="col-span-3 hidden !h-fit !max-w-[20%] animate-[bouncefrog_1s_ease-in_infinite] sm:flex"
       src="mr-frog-sitting"
       alt="Mr. Frog sitting"
     />

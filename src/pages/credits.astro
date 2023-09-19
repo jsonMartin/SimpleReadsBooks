@@ -1,20 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ButtonBack from '../components/ButtonBack.svelte';
+import Layout from "../layouts/Layout.astro";
+import ButtonBack from "../components/ButtonBack.svelte";
 ---
 
 <Layout title="credits">
-  <div class="max-w-2xl m-auto mb-5 prose-lg font-light">
-    <section class="w-full flex flex-col justify-center items-center my-10">
+  <div class="prose-lg m-auto mb-5 max-w-2xl font-light">
+    <section class="my-10 flex w-full flex-col items-center justify-center">
       <h1 class="text-4xl font-extrabold">Credits</h1>
 
       <ButtonBack client:load />
     </section>
 
     <p>
-      Website by <a
-        class="text-blue-500 font-bold"
-        href="https://jsonmart.in"
+      Website by <a class="font-bold text-blue-500" href="https://jsonmart.in"
         >Jason Martin</a
       >
     </p>
@@ -24,7 +22,10 @@ import ButtonBack from '../components/ButtonBack.svelte';
     <p class="-mb-5">Images</p>
     <ul class="list-disc">
       <li class="list-item">
-        <span class="text-gray-500 font-thin">empty-kindergarten-room-with-rainbow-sky-wallpaper 16455786 [brgfx on Freepik.com]</span>
+        <span class="font-thin text-gray-500"
+          >empty-kindergarten-room-with-rainbow-sky-wallpaper 16455786 [brgfx on
+          Freepik.com]</span
+        >
       </li>
     </ul>
   </div>

@@ -5,25 +5,27 @@
     NavLi,
     NavUl,
     NavHamburger,
-  } from 'flowbite-svelte';
-  import { onMount } from 'svelte';
-  import { CldImage } from '@jsonmartin/svelte-cloudinary-astro';
+  } from "flowbite-svelte";
+  import { onMount } from "svelte";
+  import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
 
   const MAX_PAGE_WIDTH = 1440;
 
   // Hide allow overflow from the banner to overlap other parts of the page.
   let hideOverflow = true;
 
-  $: headerClass = hideOverflow ? 'w-full relative overflow-hidden relative' : 'w-full relative overflow-visible relative';
+  $: headerClass = hideOverflow
+    ? "w-full relative overflow-hidden relative"
+    : "w-full relative overflow-visible relative";
 
   export let randomNum: number; // TODO: Remove
 
   $: loaded = false;
-  let currentPath = '';
+  let currentPath = "";
   let currentUrlPathname = currentPath;
 
   onMount(() => {
-    console.log('Mounted navbar');
+    console.log("Mounted navbar");
 
     const OVERFLOW_ANIMATION_TIME = 2000;
     setTimeout(() => {
@@ -31,21 +33,22 @@
       loaded = true;
     }, OVERFLOW_ANIMATION_TIME);
 
-
     // Update Current Path on route change
     currentUrlPathname = window.location.pathname;
-    document.addEventListener('astro:after-swap', () => {
+    document.addEventListener("astro:after-swap", () => {
       currentUrlPathname = window.location.pathname;
     });
   });
 
-  $: navDivClass = 'mx-auto flex flex-wrap justify-between items-center max-w-screen-xl' + (!loaded ? ' animate-flipInX' : '');
+  $: navDivClass =
+    "mx-auto flex flex-wrap justify-between items-center max-w-screen-xl" +
+    (!loaded ? " animate-flipInX" : "");
   $: hunnieBunnieClass =
-    'absolute bottom-[-9px] right-[-5px] sm:bottom-[-12px] md:bottom-[-22px] md:right-[-10px] lg:bottom-[-22px] lg:right-[-5px] h-16 sm:h-20 md:h-40 lg:h-40 !w-fit' +
-    (!loaded ? ' animate-slideUp' : '');
+    "absolute bottom-[-9px] right-[-5px] sm:bottom-[-12px] md:bottom-[-22px] md:right-[-10px] lg:bottom-[-22px] lg:right-[-5px] h-16 sm:h-20 md:h-40 lg:h-40 !w-fit" +
+    (!loaded ? " animate-slideUp" : "");
   $: hunnieBunnieReadingClass =
-    'absolute hidden sm:block sm:left-[-4%] md:left-[-3%] left-[-4%] bottom-[0px] rotate-3 sm:h-[100px] md:h-[140px] h-[80px] !w-fit' +
-    (!loaded ? ' animate-slideInFromLeft' : '');
+    "absolute hidden sm:block sm:left-[-4%] md:left-[-3%] left-[-4%] bottom-[0px] rotate-3 sm:h-[100px] md:h-[140px] h-[80px] !w-fit" +
+    (!loaded ? " animate-slideInFromLeft" : "");
 </script>
 
 <!-- CurrentPath: {currentUrlPathname} | RandomNum: {randomNum} | RandomNum2: {randomNum2} | loaded: {loaded} -->
@@ -62,7 +65,9 @@
       class="max-w-screen-xl"
     >
       <NavBrand href="/">
-        <div class="md:hidden flex flex-row justify-center items-center min-w-min">
+        <div
+          class="flex min-w-min flex-row items-center justify-center md:hidden"
+        >
           <CldImage
             width={128}
             height="100%"
@@ -73,14 +78,15 @@
             loading="eager"
           />
 
-          <span class="self-center whitespace-nowrap sm dark:text-white font-[Itim] text-md sm:text-lg"> Simple Reads Books </span>
+          <span
+            class="sm text-md self-center whitespace-nowrap font-[Itim] dark:text-white sm:text-lg"
+          >
+            Simple Reads Books
+          </span>
         </div>
       </NavBrand>
 
-      <NavHamburger
-        on:click={toggle}
-        class="hover:bg-primary"
-      />
+      <NavHamburger on:click={toggle} class="hover:bg-primary" />
 
       <NavUl
         {hidden}
@@ -114,7 +120,7 @@
       height="100%"
       alt="Simple Reads Books Banner"
       sizes="100vw"
-      class="max-w-screen-2xl m-auto"
+      class="m-auto max-w-screen-2xl"
       loading="eager"
     />
 

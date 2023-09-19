@@ -1,8 +1,8 @@
 export function wrapTextInParagraphTags(text) {
   return text
-    .split('\n')
+    .split("\n")
     .map((line) => `<p>${line}</p>`)
-    .join('');
+    .join("");
 }
 
 export function generateTestImage(randomSizeLimit = 400, fixedSizeLimit = 200) {
@@ -10,10 +10,10 @@ export function generateTestImage(randomSizeLimit = 400, fixedSizeLimit = 200) {
 
   return {
     id,
-    name: 'Test image ' + id,
-    imgurl: `https://picsum.photos/${Math.floor(Math.random() * randomSizeLimit) + fixedSizeLimit
-      }/${Math.floor(Math.random() * randomSizeLimit) + fixedSizeLimit}?random=6`,
-    attribution: 'picsum photos'
+    name: "Test image " + id,
+    imgurl: `https://picsum.photos/${
+      Math.floor(Math.random() * randomSizeLimit) + fixedSizeLimit
+    }/${Math.floor(Math.random() * randomSizeLimit) + fixedSizeLimit}?random=6`,
+    attribution: "picsum photos",
   };
 }
-
