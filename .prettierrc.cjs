@@ -1,18 +1,21 @@
 // /** @type {import("prettier").Config} */
 const config = {
-  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  plugins: [
+    "prettier-plugin-astro",
+    "prettier-plugin-svelte",
+    "prettier-plugin-tailwindcss",
+  ],
   overrides: [
     {
-      files: '*.astro',
+      files: "*.astro",
       options: {
-        parser: 'astro',
+        parser: "astro",
       },
     },
   ],
 };
 
 module.exports = config;
-
 
 // const config = {
 //   "plugins": ["prettier-plugin-astro"],
@@ -25,7 +28,5 @@ module.exports = config;
 //     }
 //   ]
 // };
-
-
 
 // // export default config;
