@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
 import netlify from "@astrojs/netlify/functions";
@@ -8,13 +8,13 @@ export default defineConfig({
   integrations: [tailwind(), svelte()],
 
   // output: 'hybrid',
-  output: 'server',
+  output: "server",
 
   adapter: netlify({
-    edgeMiddleware: true
+    edgeMiddleware: true,
   }),
 
   redirects: {
-    '/': '/home',
-  }
+    "/": "/home",
+  },
 });
