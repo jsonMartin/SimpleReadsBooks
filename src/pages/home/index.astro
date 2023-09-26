@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import ComingSoon from "./_ComingSoon.svelte";
 import Hero from "./_HeroGarden.astro";
 import HeroGardenMystery from "./_HeroGardenMystery.astro";
+import Testimonials from "./_Testimonials.svelte";
 ---
 
 <Layout title="Welcome">
@@ -26,4 +27,6 @@ import HeroGardenMystery from "./_HeroGardenMystery.astro";
   <HeroGardenMystery />
 
   <ComingSoon />
+
+  <Testimonials client:visible />
 </Layout>
