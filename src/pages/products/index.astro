@@ -29,19 +29,22 @@ console.log("Products:", products); // Logs on Server
             }
             id={`product-${product.id}`}
           >
+            <!-- Empty anchor tag to make the whole card clickable -->
+            <!-- Astro ViewTransitions only work with a links, so -->
+            <!-- Changing the browser URL programatically is not an option -->
             <a
               id={`product-link-${product.id}`}
               href={"/products/" + product.id}
               class="flex items-center justify-center"
-            >
-              <img
-                class="w-full rounded-t-lg object-cover"
-                src={product.images[0].src}
-                alt={"Product image" + i}
-                loading="lazy"
-                transition:name={product.id}
-              />
-            </a>
+            />
+
+            <img
+              class="w-full rounded-t-lg object-cover"
+              src={product.images[0].src}
+              alt={"Product image" + i}
+              loading="lazy"
+              transition:name={product.id}
+            />
             <div class="px-5 py-5 pt-2">
               <h1 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
                 {product.title}
