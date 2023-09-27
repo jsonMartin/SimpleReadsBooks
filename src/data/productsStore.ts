@@ -1,4 +1,22 @@
-export const products: any = {
+export type Product = {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
+  type: string;
+  images: {
+    title: number;
+    src: string;
+  }[];
+  release_date: string;
+  disabled: boolean;
+};
+
+export type Products = {
+  [key: string]: Product;
+};
+
+export const products: Products = {
   "hunnie-bunnys-garden": {
     id: "hunnie-bunnys-garden",
     title: "Hunnie Bunny's Garden",
@@ -61,8 +79,7 @@ export const products: any = {
   },
 };
 
-export const getProduct = (id: string) => {
-  debugger;
+export const getProduct = (id: string): Product => {
   return products[id];
 };
 

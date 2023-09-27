@@ -24,7 +24,7 @@ const isBook = product?.type === "book";
 {
   product ? (
     <Layout title={product.title}>
-      <div class="justify-center grid w-full grid-cols-1 items-center justify-items-center gap-4 sm:gap-1 md:grid-cols-2">
+      <div class="grid w-full grid-cols-1 items-center justify-center justify-items-center gap-4 sm:gap-1 md:grid-cols-2">
         <div
           id="carousel-wrapper"
           class="dark m-2 sm:m-6 md:m-10"
@@ -47,7 +47,7 @@ const isBook = product?.type === "book";
           ) : null}
           <Fragment set:html={wrapTextInParagraphTags(product.description)} />
           <h2 class="mt-[5px] p-0">
-            $
+            ${""}
             {product.price.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",

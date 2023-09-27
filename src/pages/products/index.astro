@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { generateTestImage } from "../../helpers";
 import { Card, Heading, Span } from "flowbite-svelte";
 import ButtonAmazon from "../../components/ButtonAmazon.svelte";
 import AvailableInFormat from "../../components/AvailableInFormat.svelte";
@@ -22,8 +21,16 @@ console.log("Products:", products); // Logs on Server
     {
       Object.values(products).map((product, i) => {
         return (
-          <Card padding="none" class={"h-fit"}>
+          <Card
+            padding="none"
+            class={
+              "product-card h-fit cursor-pointer " +
+              (product.disabled ? "disabled opacity-50" : "")
+            }
+            id={`product-${product.id}`}
+          >
             <a
+              id={`product-link-${product.id}`}
               href={"/products/" + product.id}
               class="flex items-center justify-center"
             >
@@ -47,7 +54,7 @@ console.log("Products:", products); // Logs on Server
 
               <div class="mt-5 flex items-center justify-between">
                 <span class="text-xl font-medium text-gray-900 dark:text-white">
-                  $
+                  ${""}
                   {product.price.toLocaleString("en-US", {
                     style: "currency",
                     currency: "USD",
@@ -55,7 +62,12 @@ console.log("Products:", products); // Logs on Server
                 </span>
 
                 <div transition:name={"amazon-button" + product.id}>
-                  <ButtonAmazon size="xs" />
+                  <ButtonAmazon
+                    size="xs"
+                    stopPropagation={true}
+                    disabled={product.disabled}
+                    client:load
+                  />
                 </div>
               </div>
             </div>
@@ -86,3 +98,30 @@ console.log("Products:", products); // Logs on Server
     class="!-mt-4 !mb-0 block !h-[100%] w-full !object-contain !p-1 !pb-0 sm:!-mt-8 sm:!p-8 md:!-mb-20 md:!-mt-24 md:!p-24"
   />
 </Layout>
+
+<script>
+  const addProductLinkClickHandlers = () => {
+    let productCards = Array.from(
+      document.getElementsByClassName("product-card"),
+    );
+
+    productCards.forEach((card) => {
+      const link = card.querySelector("a");
+      card.addEventListener("click", (ev) => {
+        if (!ev.isTrusted) return; // Filter out click events being sent twice for some reason
+        if (card.classList.contains("disabled")) {
+          ev.stopPropagation();
+          ev.preventDefault();
+          alert("Product not available.\n\nComing soon!");
+          return;
+        }
+
+        console.log("event:", ev);
+        console.log("Clicked product card", card.id, card);
+        link.click();
+      });
+    });
+  };
+
+  document.addEventListener("astro:page-load", addProductLinkClickHandlers);
+</script>

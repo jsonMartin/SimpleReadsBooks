@@ -4,6 +4,7 @@
   export let fullWidth = false;
   export let disabled = false;
   export let size: "xl" | "xs" | "sm" | "lg" | "md" = "xl";
+  export let stopPropagation = false; // Allows clicks to stop bubbling up to trigger event handling in parent
 
   $: buttonClass = `${fullWidth && "w-full"} no-underline`;
 </script>
@@ -17,6 +18,9 @@
   {size}
   class={buttonClass}
   {disabled}
+  on:click={(event) => {
+    stopPropagation && event.stopPropagation();
+  }}
 >
   <svg
     class="mr-3"
