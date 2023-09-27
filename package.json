@@ -10,17 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^3.0.1",
+    "@astrojs/netlify": "^3.0.2",
     "@astrojs/svelte": "^4.0.2",
     "@astrojs/tailwind": "^5.0.0",
     "@jsonmartin/svelte-cloudinary-astro": "^1.1.2",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^3.0.13",
-    "flowbite-svelte": "^0.44.15",
+    "astro": "^3.1.4",
+    "flowbite-svelte": "^0.44.17",
     "flowbite-svelte-icons": "^0.4.4",
     "nanostores": "^0.9.3",
-    "prettier": "^3",
-    "svelte": "^4.2.0",
+    "prettier": "^3.0.3",
+    "svelte": "^4.2.1",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
