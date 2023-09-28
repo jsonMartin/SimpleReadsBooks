@@ -8,11 +8,12 @@
 <div class="max-w-4xl space-y-4">
   <Carousel
     {images}
+    slideDuration={600}
     let:Indicators
     let:Controls
     bind:index
-    classSlide="flex items-center justify-center h-[100%] w-[100%] !rounded-none !bg-transparent"
-    class="!h-[300px] w-[100%] !rounded-none !bg-transparent sm:!h-[400px]"
+    imgClass="object-contain h-full !w-full rounded-sm"
+    class="align-center flex !h-[300px] w-[100%] justify-center !rounded-none !bg-transparent sm:!h-[400px]"
   >
     <Controls let:changeSlide let:ControlButton>
       <Button
@@ -41,21 +42,8 @@
     <Thumbnail
       {...image}
       {selected}
-      class="rounded-md shadow-xl hover:outline hover:outline-primary-500"
+      class="rounded-md opacity-70 shadow-xl hover:outline hover:outline-primary-500"
+      activeClass="outline outline-primary-400 !opacity-100"
     />
   </Thumbnails>
 </div>
-
-<style>
-  /* ToDo: Fix with pull request to add object fit & tailwind class parameters to Carousel as prop */
-  :global(#carousel-wrapper img) {
-    object-fit: contain !important;
-    height: 100% !important;
-    width: fit-content !important;
-    border-radius: 0.25rem !important;
-  }
-
-  :global(#carousel-wrapper button > img) {
-    object-fit: cover !important;
-  }
-</style>

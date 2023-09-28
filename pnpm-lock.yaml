@@ -24,8 +24,8 @@ dependencies:
     specifier: ^3.1.4
     version: 3.1.4
   flowbite-svelte:
-    specifier: ^0.44.17
-    version: 0.44.17(svelte@4.2.1)
+    specifier: npm:@jsonmartin/flowbite-svelte@^0.44.17
+    version: /@jsonmartin/flowbite-svelte@0.44.17(svelte@4.2.1)
   flowbite-svelte-icons:
     specifier: ^0.4.4
     version: 0.4.4(svelte@4.2.1)(tailwind-merge@1.14.0)(tailwindcss@3.3.3)
@@ -860,6 +860,19 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@jsonmartin/flowbite-svelte@0.44.17(svelte@4.2.1):
+    resolution: {integrity: sha512-08irQk/aV8SDw6sl6AIo/LEpC5VQL62piPAodyoZ2scihRCEXzGCJN0hN5C0U4IQrug+jI1/+Qinax6SfIStlg==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      '@floating-ui/dom': 1.5.3
+      apexcharts: 3.42.0
+      flowbite: 1.8.1
+      svelte: 4.2.1
+      tailwind-merge: 1.14.0
+    dev: false
 
   /@jsonmartin/svelte-cloudinary-astro@1.1.2(svelte@4.2.1):
     resolution: {integrity: sha512-SDmftpxpmBGVy3+fG+EBQi6iOxIhcXa2aluhWcNaRYoRxee2k8bTONq5vWCNlHrMzOAMms0aCUX++xCBupRf+A==}
@@ -1885,19 +1898,6 @@ packages:
       svelte: 4.2.1
       tailwind-merge: 1.14.0
       tailwindcss: 3.3.3
-    dev: false
-
-  /flowbite-svelte@0.44.17(svelte@4.2.1):
-    resolution: {integrity: sha512-Ig7K/obOQ/6uwR2zkg0NT4u5dvcqAXcM0ZkMWVGBkfCD5refnvGsS2q6lflefN+cFxXaDi9J/Rorgp6KwP9JPw==}
-    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
-    peerDependencies:
-      svelte: ^4.0.0
-    dependencies:
-      '@floating-ui/dom': 1.5.3
-      apexcharts: 3.42.0
-      flowbite: 1.8.1
-      svelte: 4.2.1
-      tailwind-merge: 1.14.0
     dev: false
 
   /flowbite@1.8.1:
