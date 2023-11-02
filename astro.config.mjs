@@ -3,18 +3,19 @@ import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
 import netlify from "@astrojs/netlify/functions";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte()],
-
+  integrations: [tailwind(), svelte(), mdx()],
   // output: 'hybrid',
-  output: "server",
+  // output: "server",
 
-  adapter: netlify({
-    edgeMiddleware: true,
-  }),
+  // adapter: netlify({
+  //   edgeMiddleware: true
+  // }),
 
   redirects: {
-    "/": "/home",
-  },
+    "/": "/home"
+  }
 });

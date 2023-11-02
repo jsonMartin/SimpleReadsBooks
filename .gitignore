@@ -17,5 +17,11 @@ pnpm-debug.log*
 .env
 .env.production
 
+# Blog
+/src/pages/posts/**
+/src/images/posts/**
+.netlify/functions-internal/**
+
+
 # macOS-specific files
 .DS_Store

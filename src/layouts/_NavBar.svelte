@@ -103,6 +103,10 @@
           <span>About</span>
         </NavLi>
 
+        <NavLi class="pl-2" href="/blog">
+          <span>Blog</span>
+        </NavLi>
+
         <NavLi class="pl-2" href="/products">
           <span>Books & Products</span>
         </NavLi>
