@@ -17,5 +17,11 @@ export default defineConfig({
 
   redirects: {
     "/": "/home"
-  }
+  },
+  // build: {
+  //   rollupOptions: {
+  //     external: 'flowbite'
+  //     // https://rollupjs.org/configuration-options/
+  //   },
+  // }
 });

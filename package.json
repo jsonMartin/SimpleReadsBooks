@@ -20,6 +20,7 @@
     "@jsonmartin/svelte-cloudinary-astro": "^1.1.2",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^3.4.3",
+    "flowbite": "^2.0.0",
     "flowbite-svelte": "npm:@jsonmartin/flowbite-svelte@^0.44.17",
     "flowbite-svelte-icons": "^0.4.5",
     "nanostores": "^0.9.4",
