@@ -1,3 +1,5 @@
+# AstroNot Blog Integration
+
 # Astro Starter Kit: Basics
 
 ```sh
