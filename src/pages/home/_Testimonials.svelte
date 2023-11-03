@@ -11,10 +11,14 @@
       document.querySelectorAll("[data-carousel-item]"),
     ).map((el, idx) => ({ position: idx, el }));
 
-    carousel = new Carousel(items, {
-      defaultPosition: 0,
-      interval: SLIDE_INTERVAL,
-    });
+    carousel = new Carousel(
+      document.getElementById("testimonial-carousel"),
+      items,
+      {
+        defaultPosition: 0,
+        interval: SLIDE_INTERVAL,
+      },
+    );
 
     carousel.cycle();
   });

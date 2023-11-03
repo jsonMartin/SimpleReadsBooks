@@ -54,7 +54,11 @@ const isBook = product?.type === "book";
             })}
           </h2>
           <div transition:name={"amazon-button" + product.id}>
-            <ButtonAmazon fullWidth disabled={product.disabled} />
+            <ButtonAmazon
+              fullWidth
+              disabled={product.disabled}
+              href={product.amazon_url}
+            />
           </div>
         </div>
       </div>

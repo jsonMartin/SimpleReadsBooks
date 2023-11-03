@@ -4,6 +4,7 @@ export type Product = {
   description: string;
   price: string;
   type: string;
+  amazon_url: string;
   images: {
     title: number;
     src: string;
@@ -24,6 +25,7 @@ export const products: Products = {
       "Hunnie Bunny’s Garden is an enchanting picture book that brings children closer to nature, instills valuable virtues and ignites a sense of responsibility towards our environment.\n\nThrough the endearing character of Hunnie Bunny, it’s a delightful blend of entertainment and education. This book also promotes discussions about nature, gardening, sustainability, and healthy eating. If you are looking for a children’s book that offers both a charming story and important life lessons, Hunnie Bunny’s Garden is the book for you!",
     price: "20.99",
     type: "book",
+    amazon_url: "https://www.amazon.com/Hunnie-Bunnys-Garden-Deborah-Carter/dp/B0C9VVS9KX/ref=sr_1_1?crid=UD2BEQT5O4R0&keywords=hunny+bunny%27s+garden&qid=1698981656&s=books&sprefix=hunni+bunny%27s+garden%2Cstripbooks%2C113&sr=1-1",
     images: [
       {
         title: 0,
@@ -52,6 +54,7 @@ export const products: Products = {
     price: "20.99",
     description: `Hunnie Bunny’s Garden Mystery is a charming tale that takes young readers on an adventure with Hunnie Bunny and her woodland friends.\n It not only entertains, but also teaches valuable lessons about friendship, communication, and understanding. It will inspire children to develop strong relationships, and approach life’s challenges with a positive and compassionate mindset.\n Through colorful illustrations and engaging storytelling, this book captivates young minds and leaves them with a heartwarming message.  `,
     release_date: "2023-09-30",
+    amazon_url: "https://www.amazon.com/Hunnie-Bunnys-Garden-Mystery-Deborah/dp/B0CL8S7XYG/",
     images: [
       {
         title: 0,

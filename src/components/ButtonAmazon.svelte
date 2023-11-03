@@ -5,14 +5,13 @@
   export let disabled = false;
   export let size: "xl" | "xs" | "sm" | "lg" | "md" = "xl";
   export let stopPropagation = false; // Allows clicks to stop bubbling up to trigger event handling in parent
+  export let href = "https://www.amazon.com/dp/B0C9VVS9KX?ref=myi_title_dp";
 
   $: buttonClass = `${fullWidth && "w-full"} no-underline`;
 </script>
 
 <Button
-  href={!disabled
-    ? "https://www.amazon.com/dp/B0C9VVS9KX?ref=myi_title_dp"
-    : ""}
+  href={!disabled ? href : ""}
   target="_blank"
   color="primary"
   {size}
