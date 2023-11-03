@@ -1,0 +1,70 @@
+---
+const { fullWidth = true } = Astro.props;
+import { postImageImport } from "../helpers/images.mjs";
+import { Image } from "astro:assets";
+
+const latestPosts = (await Astro.glob("../pages/posts/*.mdx"))
+  .sort(
+    (a: any, b: any) =>
+      new Date(b.frontmatter.publish_date) -
+      new Date(a.frontmatter.publish_date),
+  )
+  .slice(0, 4);
+---
+
+<h4 class="mb-4 text-sm font-bold uppercase text-gray-900 dark:text-white">
+  Latest Articles
+</h4>
+
+{
+  latestPosts.map(async (post) => {
+    const { title, cover, slug, id, reading_time, description } =
+      post.frontmatter;
+    let coverImg = "";
+
+    try {
+      coverImg = (await postImageImport(cover)).default;
+    } catch (e) {
+      coverImg = "";
+    }
+
+    return (
+      <div class="mb-6 flex flex-col items-center">
+        <a href={`/posts/${slug}`} class="w-full">
+          <Image
+            src={coverImg}
+            class="max-h-48 !w-full rounded-lg !object-cover"
+            alt="Image 1"
+            width={640}
+          />
+        </a>
+
+        <div class="w-full items-start justify-start p-0.5 text-left">
+          <h5 class="text-md mb-1 font-bold leading-tight text-gray-900 dark:text-white">
+            <a href={`/posts/${slug}`}>{title}</a>
+          </h5>
+          <p class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+            {(description !== "undefined" && description) || ""}
+          </p>
+          <a
+            href={`/posts/${slug}`}
+            class="inline-flex items-center text-sm font-medium text-primary-600 underline underline-offset-4 hover:no-underline dark:text-primary-500"
+          >
+            Read in {reading_time.replace(" read", "")}
+          </a>
+        </div>
+      </div>
+    );
+  })
+}
+
+<style>
+  .truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>

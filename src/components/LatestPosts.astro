@@ -37,7 +37,11 @@ import { Image } from "astro:assets";
           }
 
           return (
-            <article class="max-w-xs">
+            <article
+              class="max-w-xs"
+              transition:name={`cover-image-${id}`}
+              transition:animate="none"
+            >
               {coverImg && (
                 <a href={`/posts/${slug}`}>
                   <Image
@@ -45,8 +49,6 @@ import { Image } from "astro:assets";
                     class="mb-5 max-h-[127px] rounded-lg object-cover"
                     alt="Image 1"
                     width={452}
-                    transition:name={!fullWidth ? `cover-image-${id}` : ""}
-                    transition:animate="none"
                   />
                 </a>
               )}
@@ -62,7 +64,7 @@ import { Image } from "astro:assets";
                 </p>
                 <a
                   href={`/posts/${slug}`}
-                  class="inline-flex items-center font-medium text-primary-600 underline underline-offset-4 hover:no-underline dark:text-secondary-500"
+                  class="dark:text-secondary-500 inline-flex items-center font-medium text-primary-600 underline underline-offset-4 hover:no-underline"
                 >
                   Read in {reading_time.replace(" read", "")}
                 </a>

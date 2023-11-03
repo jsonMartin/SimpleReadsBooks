@@ -4,9 +4,7 @@ import { getImage } from "astro:assets";
 import ParallaxImageHeader from "../components/ParallaxImageHeader.svelte";
 import { postImageImport } from "../helpers/images.mjs";
 import Tags from "../components/Tags.astro";
-import TableOfContents from "../components/TableOfContents.astro";
-import LatestPosts from "../components/LatestPosts.astro";
-import Newsletter from "../components/Newsletter.svelte";
+import LatestPostsVertical from "../components/LatestPostsVertical.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -189,7 +187,7 @@ const dateStr = new Date(frontmatter.publish_date).toLocaleString("en-US", {
 
             <a href="/products/hunnie-bunnys-garden">
               <img
-                src="https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Hunnie_Bunny_s_Garden_book_cover-front_for_website_kmqcj0.png"
+                src="https://res.cloudinary.com/simple-reads-books/image/upload/w_672,h_672,f_webp,q_auto/Hunnie_Bunnys_Garden_Mystery_Book_Cover"
                 class="rounded-md"
               />
 
@@ -201,110 +199,7 @@ const dateStr = new Date(frontmatter.publish_date).toLocaleString("en-US", {
             </a>
           </div>
           <div class="mb-12">
-            <h4
-              class="mb-4 text-sm font-bold uppercase text-gray-900 dark:text-white"
-            >
-              Latest Articles
-            </h4>
-            <div class="mb-6 flex items-center">
-              <a href="#" class="shrink-0">
-                <img
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/image-1.png"
-                  class="mr-4 h-24 w-24 max-w-full rounded-lg"
-                  alt="Image 1"
-                />
-              </a>
-              <div>
-                <h5
-                  class="mb-2 text-lg font-bold leading-tight text-gray-900 dark:text-white"
-                >
-                  Our first office
-                </h5>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
-                  Over the past year, Volosoft has undergone changes.
-                </p>
-                <a
-                  href="#"
-                  class="inline-flex items-center font-medium text-primary-600 underline underline-offset-4 hover:no-underline dark:text-primary-500"
-                >
-                  Read in 9 minutes
-                </a>
-              </div>
-            </div>
-            <div class="mb-6 flex items-center">
-              <a href="#" class="shrink-0">
-                <img
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/image-2.png"
-                  class="mr-4 h-24 w-24 max-w-full rounded-lg"
-                  alt="Image 2"
-                />
-              </a>
-              <div>
-                <h5
-                  class="mb-2 text-lg font-bold leading-tight text-gray-900 dark:text-white"
-                >
-                  Enterprise Design tips
-                </h5>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
-                  Over the past year, Volosoft has undergone changes.
-                </p>
-                <a
-                  href="#"
-                  class="inline-flex items-center font-medium text-primary-600 underline underline-offset-4 hover:no-underline dark:text-primary-500"
-                >
-                  Read in 14 minutes
-                </a>
-              </div>
-            </div>
-            <div class="mb-6 flex items-center">
-              <a href="#" class="shrink-0">
-                <img
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/image-3.png"
-                  class="mr-4 h-24 w-24 max-w-full rounded-lg"
-                  alt="Image 3"
-                />
-              </a>
-              <div>
-                <h5
-                  class="mb-2 text-lg font-bold leading-tight text-gray-900 dark:text-white"
-                >
-                  Partnered up with Google
-                </h5>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
-                  Over the past year, Volosoft has undergone changes.
-                </p>
-                <a
-                  href="#"
-                  class="inline-flex items-center font-medium text-primary-600 underline underline-offset-4 hover:no-underline dark:text-primary-500"
-                >
-                  Read in 9 minutes
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <a
-              href="#"
-              class="mb-3 flex h-48 w-full items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700"
-            >
-              <svg
-                aria-hidden="true"
-                class="h-8 w-8 text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  fill-rule="evenodd"
-                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                  clip-rule="evenodd"></path></svg
-              >
-            </a>
-            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-              Students and Teachers, save up to 60% on Flowbite Creative Cloud.
-            </p>
-            <p class="text-xs uppercase text-gray-400 dark:text-gray-500">
-              Ads placeholder
-            </p>
+            <LatestPostsVertical />
           </div>
         </div>
       </aside>
