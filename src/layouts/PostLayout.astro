@@ -31,6 +31,8 @@ const dateStr = new Date(frontmatter.publish_date).toLocaleString("en-US", {
   day: "numeric",
   year: "numeric",
 });
+
+const url = new URL(Astro.request.url);
 ---
 
 <Layout {title} {description}>
@@ -97,7 +99,7 @@ const dateStr = new Date(frontmatter.publish_date).toLocaleString("en-US", {
           <aside aria-label="Share social media">
             <div class="not-prose">
               <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${Astro.request.url}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=https://simplereadsbooks.com${url.pathname}`}
                 target="_blank"
               >
                 <button
@@ -128,7 +130,7 @@ const dateStr = new Date(frontmatter.publish_date).toLocaleString("en-US", {
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
               <a
-                href={`https://twitter.com/intent/tweet?url=${Astro.request.url}`}
+                href={`https://twitter.com/intent/tweet?url=https://simplereadsbooks.com${url.pathname}`}
                 target="_blank"
               >
                 <button
