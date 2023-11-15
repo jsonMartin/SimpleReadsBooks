@@ -6,9 +6,10 @@ import EmailSubscribeModal from "./_EmailSubscribeModal.svelte";
 
 interface Props {
   title: string;
+  description: string; // Used to populate social sharing cards
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 function generateRandomNumber() {
   return Math.floor(Math.random() * 100);
@@ -54,7 +55,7 @@ const randomNum = generateRandomNumber(); // Used for testing state persistance 
 
     <!-- Meta -->
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" /><link
@@ -81,9 +82,11 @@ const randomNum = generateRandomNumber(); // Used for testing state persistance 
       gtag("config", "G-9YTEE5C1YT");
     </script>
 
-
     <!-- Flowbite Styling (required for Testimonials carousel) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <!-- Fonts -->
@@ -99,6 +102,6 @@ const randomNum = generateRandomNumber(); // Used for testing state persistance 
       <Footer client:load />
 
       <EmailSubscribeModal client:load />
-  </div>
+    </div>
   </body>
 </html>
