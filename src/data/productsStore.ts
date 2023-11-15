@@ -43,6 +43,17 @@ export const products: Products = {
         title: 3,
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/hunnie-bunny-book-cover-back.png",
       },
+      {
+        title: 4,
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Gold_Book_Award_llkqe4.png",
+      },
+      {
+        title: 5,
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Silver_Book_Award_hk0lja.png",
+      },
+
+
+
     ],
     release_date: "2023-08-15",
     disabled: false,
