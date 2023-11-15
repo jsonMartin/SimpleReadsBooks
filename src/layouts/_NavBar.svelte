@@ -96,7 +96,7 @@
         ulClass="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium bg-transparent"
         divClass="w-full md:block md:w-auto md:bg-black md:bg-opacity-[.15] md:rounded-full md:mr-2 md:mt-2 md:[transform:perspective(250px)_translateZ(0)_rotateX(5deg)]"
       >
-        <NavLi class="pl-2" href="/home">
+        <NavLi class="pl-2" href="/">
           <span>Welcome</span>
         </NavLi>
         <NavLi class="pl-2" href="/about">

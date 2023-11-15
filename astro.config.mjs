@@ -15,9 +15,9 @@ export default defineConfig({
   //   edgeMiddleware: true
   // }),
 
-  redirects: {
-    "/": "/home"
-  },
+  // redirects: {
+  //   "/": "/home"
+  // },
   // build: {
   //   rollupOptions: {
   //     external: 'flowbite'
