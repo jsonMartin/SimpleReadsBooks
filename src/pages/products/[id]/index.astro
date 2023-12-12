@@ -4,7 +4,6 @@ export function getStaticPaths() {
   return [
     { params: { id: "hunnie-bunnys-garden" } },
     { params: { id: "hunnie-bunnys-garden-mystery" } },
-    { params: { id: "hunnie-bunnys-christmas-wish" } },
   ];
 }
 
@@ -16,7 +15,6 @@ import ButtonAmazon from "../../../components/ButtonAmazon.svelte";
 import ButtonBack from "../../../components/ButtonBack.svelte";
 import { ExclamationCircleSolid } from "flowbite-svelte-icons";
 import { wrapTextInParagraphTags } from "../../../helpers";
-import ButtonBarnesAndNoble from "../../../components/ButtonBarnesAndNoble.svelte";
 
 const { id } = Astro.params;
 const product = getProduct(id!);
@@ -55,27 +53,12 @@ const isBook = product?.type === "book";
               currency: "USD",
             })}
           </h2>
-
-          <div class="flex flex-col gap-2">
-            {product.amazon_url && (
-              <div transition:name={"amazon-button" + product.id}>
-                <ButtonAmazon
-                  fullWidth
-                  disabled={product.disabled}
-                  href={product.amazon_url}
-                />
-              </div>
-            )}
-
-            {product.barnes_and_noble_url && (
-              <div transition:name={"barnes-and-noble-button" + product.id}>
-                <ButtonBarnesAndNoble
-                  fullWidth
-                  disabled={product.disabled}
-                  href={product.barnes_and_noble_url}
-                />
-              </div>
-            )}
+          <div transition:name={"amazon-button" + product.id}>
+            <ButtonAmazon
+              fullWidth
+              disabled={product.disabled}
+              href={product.amazon_url}
+            />
           </div>
         </div>
       </div>

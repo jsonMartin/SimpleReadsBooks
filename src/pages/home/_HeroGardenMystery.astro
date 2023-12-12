@@ -3,7 +3,7 @@ import ButtonAmazon from "../../components/ButtonAmazon.svelte";
 import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
 ---
 
-<section class="bg-[#718764]">
+<section>
   <div class="flex flex-row flex-wrap items-center justify-center font-[Itim]">
     <div
       class="flex basis-full flex-col items-center justify-start p-4 md:basis-5/12"
@@ -12,7 +12,7 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
         class="mb-10 text-center text-xl font-normal text-black md:mb-20 md:mt-[70px] lg:text-2xl xl:mt-[90px] xl:text-3xl"
       >
         <div
-          class="mb-2 text-center text-2xl font-normal text-white lg:text-3xl xl:text-4xl"
+          class="mb-2 text-center text-2xl font-normal text-black lg:text-3xl xl:text-4xl"
         >
           Hunnie Bunny's Garden Mystery
         </div>
@@ -20,14 +20,9 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
 
       <ButtonAmazon
         href="https://www.amazon.com/Hunnie-Bunnys-Garden-Mystery-Deborah-ebook/dp/B0CM852TLH"
-        buttonClass="bg-[#0594FE]"
       />
 
-      <div
-        class="max-w-[200px]
-        sm:max-w-[300px]
-        md:max-w-[400px]"
-      >
+      <div class="max-w-[200px] sm:max-w-[300px] md:max-w-[400px]">
         <CldImage
           width={1124}
           aspectRatio={1124 / 1338}
@@ -35,7 +30,6 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
           src="Hunnie_Bunny-2_sdaruu"
           alt="hunnie bunny reading"
           class="mt-16"
-          loading="lazy"
         />
       </div>
     </div>
@@ -55,7 +49,7 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
         />
 
         <div
-          class="self-stretch p-3 text-left text-xl text-white md:text-xl lg:text-2xl"
+          class="self-stretch p-3 text-center text-xl text-gray-900 md:text-xl lg:text-2xl"
         >
           <p class="mb-2">
             <span class="underline">Hunnie Bunny’s Garden Mystery</span> is a
