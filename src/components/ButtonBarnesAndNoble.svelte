@@ -9,7 +9,7 @@
     "https://www.barnesandnoble.com/w/book/1144456746?ean=9798988487241";
   export let color = "";
   export let buttonClass = `${fullWidth && "w-full"} no-underline ${
-    !color ? "bg-[#3E5962]" : ""
+    !color ? "bg-[#3E5962] text-white" : ""
   }`;
 </script>
 
@@ -24,16 +24,6 @@
     stopPropagation && event.stopPropagation();
   }}
 >
-  <!-- <svg
-    class="mr-3"
-    style="color: white"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 512 512"
-    >
-
-     -->
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
