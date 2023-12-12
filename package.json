@@ -19,7 +19,7 @@
     "@astrojs/tailwind": "^5.0.2",
     "@jsonmartin/svelte-cloudinary-astro": "^1.1.2",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.0.0",
+    "astro": "4.0.3",
     "flowbite": "^2.0.0",
     "flowbite-svelte": "npm:@jsonmartin/flowbite-svelte@^0.44.17",
     "flowbite-svelte-icons": "^0.4.5",

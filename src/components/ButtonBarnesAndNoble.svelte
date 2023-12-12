@@ -5,8 +5,7 @@
   export let disabled = false;
   export let size: "xl" | "xs" | "sm" | "lg" | "md" = "xl";
   export let stopPropagation = false; // Allows clicks to stop bubbling up to trigger event handling in parent
-  export let href =
-    "https://www.barnesandnoble.com/w/book/1144456746?ean=9798988487241";
+  export let href = "";
   export let color = "";
   export let buttonClass = `${fullWidth && "w-full"} no-underline ${
     !color ? "bg-[#3E5962] text-white" : ""

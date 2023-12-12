@@ -5,6 +5,7 @@ import ButtonAmazon from "../../components/ButtonAmazon.svelte";
 import AvailableInFormat from "../../components/AvailableInFormat.svelte";
 import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
 import { products } from "../../data/productsStore";
+import ButtonBarnesAndNoble from "../../components/ButtonBarnesAndNoble.svelte";
 
 console.log("Products:", products); // Logs on Server
 ---
@@ -57,21 +58,31 @@ console.log("Products:", products); // Logs on Server
 
               <div class="mt-5 flex items-center justify-between">
                 <span class="text-xl font-medium text-gray-900 dark:text-white">
-                  ${""}
-                  {product.price.toLocaleString("en-US", {
+                  ${product.price.toLocaleString("en-US", {
                     style: "currency",
                     currency: "USD",
                   })}
                 </span>
 
-                <div transition:name={"amazon-button" + product.id}>
-                  <ButtonAmazon
-                    size="xs"
-                    stopPropagation={true}
-                    disabled={product.disabled}
-                    client:load
-                  />
-                </div>
+                  {
+                    product.barnes_and_noble_url ?
+                      <div transition:name={"barnes-and-noble-button" + product.id}>
+                          <ButtonBarnesAndNoble
+                          size="xs"
+                          stopPropagation={true}
+                          disabled={product.disabled}
+                          client:load />
+                      </div>
+                      :
+                      <div transition:name={"amazon-button" + product.id}>
+                        <ButtonAmazon
+                          size="xs"
+                          stopPropagation={true}
+                          disabled={product.disabled}
+                          client:load
+                        />
+                      </div>
+                  }
               </div>
             </div>
           </Card>
