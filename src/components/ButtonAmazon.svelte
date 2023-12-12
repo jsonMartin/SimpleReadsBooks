@@ -6,17 +6,17 @@
   export let size: "xl" | "xs" | "sm" | "lg" | "md" = "xl";
   export let stopPropagation = false; // Allows clicks to stop bubbling up to trigger event handling in parent
   export let href = "https://www.amazon.com/dp/B0C9VVS9KX?ref=myi_title_dp";
-
-  $: buttonClass = `${fullWidth && "w-full"} no-underline`;
+  export let color = "primary";
+  export let buttonClass = `${fullWidth && "w-full"} no-underline`;
 </script>
 
 <Button
   href={!disabled ? href : ""}
   target="_blank"
-  color="primary"
   {size}
   class={buttonClass}
   {disabled}
+  {color}
   on:click={(event) => {
     stopPropagation && event.stopPropagation();
   }}

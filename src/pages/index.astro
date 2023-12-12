@@ -2,8 +2,9 @@
 import LatestPosts from "../components/LatestPosts.astro";
 import Layout from "../layouts/Layout.astro";
 import ComingSoon from "./home/_ComingSoon.svelte";
-import Hero from "./home/_HeroGarden.astro";
+import HeroGarden from "./home/_HeroGarden.astro";
 import HeroGardenMystery from "./home/_HeroGardenMystery.astro";
+import HeroChristmasWish from "./home/_HeroChristmasWish.astro";
 import Testimonials from "./home/_Testimonials.svelte";
 ---
 
@@ -23,9 +24,11 @@ import Testimonials from "./home/_Testimonials.svelte";
     </div>
   </section>
 
-  <Hero transition:name="image" transition:animate="slide" />
+  <HeroChristmasWish transition:name="image" transition:animate="slide" />
 
-  <HeroGardenMystery />
+  <HeroGardenMystery transition:name="image" transition:animate="slide" />
+
+  <HeroGarden transition:name="image" transition:animate="slide" />
 
   <ComingSoon />
 

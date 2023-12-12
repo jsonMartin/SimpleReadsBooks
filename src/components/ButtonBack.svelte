@@ -7,7 +7,7 @@
 <Button
   class="mt-[24px] bg-primary-500 text-white"
   size="lg"
-  on:click={() => (window.location.href = "/home")}
+  on:click={() => (window.location.href = "/")}
 >
   <svg
     class="mr-2 h-4 w-4"

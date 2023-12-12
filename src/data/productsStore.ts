@@ -4,9 +4,10 @@ export type Product = {
   description: string;
   price: string;
   type: string;
-  amazon_url: string;
+  amazon_url?: string;
+  barnes_and_noble_url?: string;
   images: {
-    title: number;
+    title?: number;
     src: string;
   }[];
   release_date: string;
@@ -87,6 +88,38 @@ export const products: Products = {
       {
         title: 4,
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357123/HBGM_Page_4_brayua.png",
+      },
+    ],
+    type: "book",
+    disabled: false,
+  },
+
+  "hunnie-bunnys-christmas-wish": {
+    id: "hunnie-bunnys-christmas-wish",
+    title: "Hunnie Bunny's Christmas Wish",
+    price: "20.99",
+    description: `Hunnie Bunny’s Christmas Wish is a delightful tale that combines the magic of Christmas with the joy of making new friends. The story beautifully conveys the idea that sometimes Christmas wishes do come true in the most unexpected ways.\nIt’s a reminder that the holiday season is not just about decorations and festivities, but also about the gift of companionship and the love of friends. This is a perfect story to read during the holiday season, leaving readers with a warm and fuzzy feeling.\n<strong class="text-xs"><em>*Hardback is available at Barnes & Noble and Paperback at Amazon</em></strong>`,
+    release_date: "2023-09-30",
+    barnes_and_noble_url: "https://www.barnesandnoble.com/w/book/1144456746?ean=9798988487241",
+    images: [
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1694474872/HBCW_front_book_cover_ggkfhx.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357070/HBCW_Page_1_qacskw.png",
+      },
+
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357089/HBCW_Page_2_vpzrpq.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357106/HBCW_Page_3_jegd4n.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357106/HBCW_Page_4_ew3gya.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357123/HBCW_Back_book_cover_cao2z5.png",
       },
     ],
     type: "book",
