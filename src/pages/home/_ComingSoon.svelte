@@ -25,7 +25,6 @@
           </p>
           <div class="mt-30">
             <span class="md:text-xl lg:text-2xl">
-              Hunnie Bunny’s Christmas Wish <br />
               Hunnie Bunny's Special Gift<br />
               Hunnie Bunny and the Lost Fairy<br />
               Hunnie Bunny's New Neighbors<br />
