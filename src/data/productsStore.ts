@@ -53,6 +53,9 @@ export const products: Products = {
         title: 5,
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Silver_Book_Award_hk0lja.png",
       },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/5star-shiny-hr_vgdmeg"
+      }
     ],
     release_date: "2023-08-15",
     disabled: false,
@@ -88,6 +91,14 @@ export const products: Products = {
         title: 4,
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357123/HBGM_Page_4_brayua.png",
       },
+      {
+        title: 5,
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Gold_Book_Award_llkqe4.png",
+      },
+      {
+        title: 6,
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Silver_Book_Award_hk0lja.png",
+      },
     ],
     type: "book",
     disabled: false,
@@ -121,6 +132,9 @@ export const products: Products = {
       {
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1698357123/HBCW_Back_book_cover_cao2z5.png",
       },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Gold_Book_Award_llkqe4.png",
+      }
     ],
     type: "book",
     disabled: false,
