@@ -54,13 +54,12 @@ export const products: Products = {
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Silver_Book_Award_hk0lja.png",
       },
       {
-        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/5star-shiny-hr_vgdmeg"
-      }
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/5star-shiny-hr_vgdmeg",
+      },
     ],
     release_date: "2023-08-15",
     disabled: false,
   },
-
   "hunnie-bunnys-garden-mystery": {
     id: "hunnie-bunnys-garden-mystery",
     title: "Hunnie Bunny's Garden Mystery",
@@ -134,7 +133,10 @@ export const products: Products = {
       },
       {
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/Literary_Titan_Gold_Book_Award_llkqe4.png",
-      }
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/5star-shiny-hr_vgdmeg",
+      },
     ],
     type: "book",
     disabled: false,
