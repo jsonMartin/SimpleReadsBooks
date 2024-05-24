@@ -25,13 +25,13 @@
           </p>
           <div class="mt-30">
             <span class="md:text-xl lg:text-2xl">
-              Hunnie Bunny's Special Gift<br />
               Hunnie Bunny and the Lost Fairy<br />
               Hunnie Bunny's New Neighbors<br />
               Hunnie Bunny and the Magic Flute<br />
               Hunnie Bunny and the Unicorn<br />
               Hunnie Bunny's Great Escape<br />
               Hunnie Bunny — A New Beginning<br />
+              Hunnie Bunny to the Rescue<br />
             </span>
           </div>
         </div>

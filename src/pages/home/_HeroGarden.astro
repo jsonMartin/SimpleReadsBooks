@@ -51,13 +51,15 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
           Hunnie Bunny's Garden
         </div>
         <div>
-          <div class="flex gap-6 justify-center items-center md:-mb-4 max-w-full mt-6 w-fit m-auto p-1 rounded-lg">
+          <div
+            class="m-auto mt-6 flex w-fit max-w-full items-center justify-center gap-6 rounded-lg p-1 md:-mb-4"
+          >
             <CldImage
               width={200}
               aspectRatio={2018 / 2047}
               src="Literary_Titan_Gold_Book_Award_llkqe4"
               alt="Gold award"
-              class="!w-[80px] xs:!w-[100px] h-full"
+              class="h-full !w-[80px] xs:!w-[100px]"
             />
             <CldImage
               width={200}
@@ -65,7 +67,7 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
               aspectRatio={2018 / 2047}
               src="Literary_Titan_Silver_Book_Award_hk0lja"
               alt="Silver award"
-              class="!w-[80px] xs:!w-[100px] h-full"
+              class="h-full !w-[80px] xs:!w-[100px]"
             />
             <CldImage
               width={200}
@@ -73,7 +75,7 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
               aspectRatio={2018 / 2047}
               src="5star-shiny-hr_vgdmeg"
               alt="Readers favorite"
-              class="!w-[80px] xs:!w-[100px] h-full"
+              class="h-full !w-[80px] xs:!w-[100px]"
             />
           </div>
         </div>
@@ -88,7 +90,7 @@ import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
         style="scale:1.25"
         src="hunnie-bunny-reading-book"
         alt="hunnie bunny reading"
-        class="mt-16"
+        class="mt-16 scale-x-[-1]"
       />
     </div>
   </div>

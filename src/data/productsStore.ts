@@ -107,7 +107,7 @@ export const products: Products = {
     id: "hunnie-bunnys-christmas-wish",
     title: "Hunnie Bunny's Christmas Wish",
     price: "20.99",
-    description: `Hunnie Bunny’s Christmas Wish is a delightful tale that combines the magic of Christmas with the joy of making new friends. The story beautifully conveys the idea that sometimes Christmas wishes do come true in the most unexpected ways.\nIt’s a reminder that the holiday season is not just about decorations and festivities, but also about the gift of companionship and the love of friends. This is a perfect story to read during the holiday season, leaving readers with a warm and fuzzy feeling.\n<strong class="text-xs"><em>* Hardback is available at Barnes & Noble and Paperback at Amazon</em></strong>`,
+    description: `Hunnie Bunny’s Christmas Wish is a delightful tale that combines the magic of Christmas with the joy of making new friends. The story beautifully conveys the idea that sometimes Christmas wishes do come true in the most unexpected ways.\nIt’s a reminder that the holiday season is not just about decorations and festivities, but also about the gift of companionship and the love of friends. This is a perfect story to read during the holiday season, leaving readers with a warm and fuzzy feeling.`,
     release_date: "2023-09-30",
     amazon_url:
       "https://www.amazon.com/Hunnie-Bunnys-Christmas-Deborah-Carter/dp/B0CPM1913N",
@@ -136,6 +136,36 @@ export const products: Products = {
       },
       {
         src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/5star-shiny-hr_vgdmeg",
+      },
+    ],
+    type: "book",
+    disabled: false,
+  },
+  "hunnie-bunnys-special-gift": {
+    id: "hunnie-bunnys-special-gift",
+    title: "Hunnie Bunny's Special Gift",
+    price: "20.99",
+    description: `Hunnie Bunny’s Special Gift is a charming tale that entertains and educates young readers on how some animals prepare for winter.\n The story centers around friendship, sharing, kindness, and compassion, leaving children with a positive message about the joy of helping others. The vivid and colorful illustrations bring the woodland setting to life, complementing the narrative and engaging the reader.\n Hunnie Bunny’s Special Gift is a delightful read that will appeal to children and adults alike.`,
+    release_date: "2024-05-20",
+    amazon_url: "https://www.amazon.com/Hunnie-Bunnys-Special-Childrens-Picture/dp/B0D4Q1NHVR/",
+    images: [
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1715207937/Hunnie_Bunny_s_Special_Gift_Front_Cover_vhe7kv.png"
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1715207993/Hunnie_Bunny_s_Special_Gift_Page_1_w6hy8z.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1715208015/Hunnie_Bunny_s_Special_Gift_Page_2_u2mn5o.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1715208036/Hunnie_Bunny_s_Special_Gift_Page_3_fqwvj8.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1715208056/Hunnie_Bunny_s_Special_Gift_Page_4_qpwf6d.png",
+      },
+      {
+        src: "https://res.cloudinary.com/simple-reads-books/image/upload/w_1276,f_webp,q_auto/v1715207971/Hunnie_Bunny_s_Special_Gift_Back_Cover_xvt6im.png",
       },
     ],
     type: "book",

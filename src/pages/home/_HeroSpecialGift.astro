@@ -1,0 +1,97 @@
+---
+import ButtonAmazon from "../../components/ButtonAmazon.svelte";
+import { CldImage } from "@jsonmartin/svelte-cloudinary-astro";
+---
+
+<section>
+  <div class="flex flex-row flex-wrap bg-[#9278B7] font-[Itim]">
+    <div
+      class="flex basis-full flex-col items-center justify-start p-4 md:basis-5/12"
+    >
+      <div
+        class="mb-10 text-center text-xl font-normal text-white md:mb-20 md:mt-[70px] lg:text-2xl xl:mt-[90px] xl:text-3xl"
+      >
+        <div
+          class="mb-2 text-center text-2xl font-normal text-white lg:text-3xl xl:text-4xl"
+        >
+          Hunnie Bunny's Special Gift
+        </div>
+
+        <!-- <div class="special-gift-awards"> -->
+        <!--   <div -->
+        <!--     class="m-auto mt-6 flex w-fit max-w-full items-center justify-center gap-6 rounded-lg p-1 md:-mb-4" -->
+        <!--   > -->
+        <!--     <CldImage -->
+        <!--       width={200} -->
+        <!--       aspectRatio={2018 / 2047} -->
+        <!--       src="Literary_Titan_Gold_Book_Award_llkqe4" -->
+        <!--       alt="Gold award" -->
+        <!--       class="h-full !w-[80px] xs:!w-[100px]" -->
+        <!--     /> -->
+        <!--     <CldImage -->
+        <!--       width={200} -->
+        <!--       height="100%" -->
+        <!--       aspectRatio={2018 / 2047} -->
+        <!--       src="Literary_Titan_Silver_Book_Award_hk0lja" -->
+        <!--       alt="Silver award" -->
+        <!--       class="h-full !w-[80px] xs:!w-[100px]" -->
+        <!--     /> -->
+        <!--     <CldImage -->
+        <!--       width={200} -->
+        <!--       height="100%" -->
+        <!--       aspectRatio={2018 / 2047} -->
+        <!--       src="5star-shiny-hr_vgdmeg" -->
+        <!--       alt="Readers favorite" -->
+        <!--       class="h-full !w-[80px] xs:!w-[100px]" -->
+        <!--     /> -->
+        <!--   </div> -->
+        <!-- </div> -->
+      </div>
+
+      <ButtonAmazon
+        href="https://www.amazon.com/Hunnie-Bunnys-Special-Childrens-Picture/dp/B0D4Q1NHVR/"
+      />
+
+      <CldImage
+        width={1420}
+        height="100%"
+        aspectRatio={2100 / 1500}
+        style="scale:1.25"
+        src="hunnie-bunny-reading-book"
+        alt="hunnie bunny reading"
+        class="hidden md:mt-48 md:block"
+      />
+    </div>
+
+    <div class="p-4 md:basis-7/12" role="button" tabindex="0">
+      <a href="/products/hunnie-bunnys-special-gift">
+        <CldImage
+          width={1616}
+          height="100%"
+          aspectRatio={2468 / 2630}
+          class="w-full rounded-lg"
+          src="Hunnie_Bunny_s_Special_Gift_Front_Cover_vhe7kv"
+          alt="book mockup cover"
+          quality={75}
+          loading="lazy"
+          transition:name="hunnie-bunnys-garden"
+        />
+
+        <div
+          class="self-stretch p-3 text-left text-xl text-white md:text-xl lg:text-2xl"
+        >
+          <p class="mb-2">
+            <span class="underline">Hunnie Bunny's Special Gift</span> is a
+            heartwarming and delightful children’s picture book that skillfully
+            captures the essence of friendship, generosity and the joy of giving
+            against the backdrop of the changing seasons.
+          </p>
+          <p class="mb-2">
+            The engaging story combines valuable lessons and promotes positive
+            values, making it a wonderful addition to any child’s library.
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
