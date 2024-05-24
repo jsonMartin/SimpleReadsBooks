@@ -18,8 +18,6 @@
     ? "w-full relative overflow-hidden relative"
     : "w-full relative overflow-visible relative";
 
-  export let randomNum: number; // TODO: Remove
-
   $: loaded = false;
   let currentPath = "";
   let currentUrlPathname = currentPath;
@@ -51,7 +49,6 @@
     (!loaded ? " animate-slideInFromLeft" : "");
 </script>
 
-<!-- CurrentPath: {currentUrlPathname} | RandomNum: {randomNum} | RandomNum2: {randomNum2} | loaded: {loaded} -->
 <div id="header-container">
   <!-- Use visibility:hidden instead of conditionally rendering -->
   <!-- This is to prevent the animation from firing unnecessarily -->

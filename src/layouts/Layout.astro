@@ -10,12 +10,6 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-
-function generateRandomNumber() {
-  return Math.floor(Math.random() * 100);
-}
-
-const randomNum = generateRandomNumber(); // Used for testing state persistance with View Transitions API
 ---
 
 <style is:global>
@@ -95,7 +89,7 @@ const randomNum = generateRandomNumber(); // Used for testing state persistance 
       id="page-container"
       class="m-auto flex w-full max-w-screen-xl flex-col overflow-hidden bg-white"
     >
-      <NavBar randomNum={randomNum} client:load transition:persist="header" />
+      <NavBar client:load transition:persist="header" />
 
       <slot />
 
